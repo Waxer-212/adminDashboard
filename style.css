@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --wd-container-width: 1400px;
+}
+
+html,body
+{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+.pagewrapper {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    height: 100vh;
+    width: 100%;
+    max-width: var(--wd-container-width);
+    background-color: #e0e0e0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visual distinction */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.sidebar
+{
+    height: 100%;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 15px;
+}
+
+.side-menu li
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dashboard-logo
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header
+{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 15vh;
+    width: 100%;
+    min-height: 130px;
+}
+
+.header__left
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header__left div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.header__left div:first-child img {
+    margin-right: 10px; /* Add some space between the image and the input */
+}
+
+.header__left input
+{
+    width: 90%;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+}
+
+.someInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.someInfo div
+{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 5px;
+    gap:3px
+}
+
+.someInfo div span:first-child
+{
+    font-size: 0.8rem;
+}
+
+.notificationIMG
+{
+    width: 20px;
+    height: 20px;
+}
+
+.profileImage, .searchIMG
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header__right
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    justify-content:flex-start;
+}
+
+.header__right div:first-child
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 40px;
+}
+
+.header__right div:nth-child(2)
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.header__right div:nth-child(2) button
+{
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.content
+{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.subTitle
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    grid-column: 1 / span 2;
+}
+
+.projects
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+}
+
+.project
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    height : 22vh;
+    border-left: orange 5px solid;
+}
+
+
+.informations
+{
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 0px;
+    margin-top: 20px;
+}
+
+.announcement
+{
+    border-bottom: #333 1px solid;
+    padding: 10px;
+}
+
+.announcement h3
+{
+    margin-bottom: 5px;
+}
+
+.announcement p
+{
+    margin-bottom: 5px;
+    font-size: smaller;
+}
+
+.announcement:last-child
+{
+    border-bottom: none;
+}
+
+.lower
+{
+    margin-top: auto;
+}
+
+.trending
+{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 0px;
+    margin-top: 20px;
+}
+
+.trend{
+    border-bottom: #333 1px solid;
+    padding: 10px;
+}
+
+.trend:last-child
+{
+    border-bottom: none;
+}
